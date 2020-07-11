@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <style>
+            body, html {
+  height: 100%;
+}
+            .parallax1 {
+                background-image: url(demo.jpg);
+                min-height: 100%;
+            }
+            
+            .parallax2 {
+                background-image: url(demo1.jpg);
+                min-height: 400px;
+            }
+            
+            .parallax3 {
+                background-image: url(demo2.jpg);
+                min-height: 100%;
+            }
+            
+            .parallax1, .parallax2, .parallax3{
+                position: relative;
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .text{
+                background-color: black;
+                font-size: 16px;
+                color: #777;
+                font-family: monospace;
+                padding: 50px 80px;
+                text-align: justify;
+                
+            }
+            #heading{
+                color: white; 
+                font-family: fantasy; 
+                font-style: italic; 
+                letter-spacing: 1em; 
+                font-size: 48px; 
+                text-align: center;
+                top: 50%;
+                width: 100%;
+                text-align: center;
+                position: absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parallax1">
+            <p id="heading">PARALLAX EFFECT</p>
+        </div>
+            <div class="text">
+                <h2 style="text-align: center">PARALLAX DEMO</h2>
+                Parallax scrolling is a web site trend where the background content is moved at a different speed than the foreground content while scrolling. Nascetur per nec posuere turpis, lectus nec libero turpis nunc at, sed posuere mollis ullamcorper libero ante lectus, blandit pellentesque a, magna turpis est sapien duis blandit dignissim. Viverra interdum mi magna mi, morbi sociis. Condimentum dui ipsum consequat morbi, curabitur aliquam pede, nullam vitae eu placerat eget et vehicula. Varius quisque non molestie dolor, nunc nisl dapibus vestibulum at, sodales tincidunt mauris ullamcorper, dapibus pulvinar, in in neque risus odio. Accumsan fringilla vulputate at quibusdam sociis eleifend, aenean maecenas vulputate, non id vehicula lorem mattis, ratione interdum sociis ornare. Suscipit proin magna cras vel, non sit platea sit, maecenas ante augue etiam maecenas, porta porttitor placerat leo.
+            </div>
+        <div class="parallax2">
+            <p id="heading">LESS HEIGHT</p>
+        </div>
+        <div class="text">
+               Scroll up and down to really get the feeling of how Parallax Scrolling works.
+        </div>
+        <div class="parallax3">
+            <p id="heading">COOL!</p>
+        </div>
+    </body>
+</html>
