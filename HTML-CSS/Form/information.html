@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+            <h1 style="text-align: center">CHECKOUT FORM</h1>
+            <div class="container">
+                <form action="/action_page.php">
+                    <div class="row">
+                        <div class="col-50">
+                            <h3>Personal Information</h3>
+                            <div class="row">
+                                <div class="col-50">
+                                    <label for="fname"><i class="fa fa-user"></i> First Name</label>
+                                    <input type="text" id="fname" name="firstname" placeholder="First Name">
+                                </div>
+                                <div class="col-50">
+                                <label for="fname"><i class="fa fa-user"></i> Last Name</label>
+                                <input type="text" id="fname" name="firstname" placeholder="Last Name">
+                                </div>
+                            </div>
+                            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                            <input type="text" id="email" name="email" placeholder="mm@gmail.com">
+                            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                            <label for="city"><i class="fa fa-institution"></i> City</label>
+                            <input type="text" id="city" name="city" placeholder="PUNE">
+                            <div class="row">
+                                <div class="col-50">
+                                    <label for="state">State</label>
+                                    <input type="text" id="state" name="state" placeholder="Maharastra">
+                                </div>
+                                <div class="col-50">
+                                    <label for="zip">Zip</label>
+                                    <input type="text" id="zip" name="zip" placeholder="411041">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-50">
+                            <h3>Booking Information</h3>
+            
+                            <label><i class="fa fa-institution"></i>Room Type</label>
+                            <select id="dropdown">
+                                <option disabled selected value>Select Room Type</option>
+                                <option>AC Room</option>
+                                <option>NON-AC Room</option>
+                                <option>Delux Room</option>
+                            </select>
+                            <label><i class="fa fa-institution"></i>Room Size</label>
+                            <label class="contain">
+                                <input type="radio" checked="checked" name="radio">Single Room&nbsp;&nbsp;
+                                <input type="radio" name="radio">Double Room&nbsp;&nbsp;
+                                <input type="radio" name="radio">King Room
+                            </label>
+
+                            <label><i class="fa fa-institution"></i>Facilities</label>
+                            <label class="con"><input type="checkbox"/>&nbsp;BreakFast</label>
+                            <label class="con"><input type="checkbox"/>&nbsp;Lunch</label>
+                            <label class="con"><input type="checkbox"/>&nbsp;Dinner</label>
+                            <label class="con"><input type="checkbox"/>&nbsp;Laundry</label>
+                            <label class="con"><input type="checkbox"/>&nbsp;Drinks</label>
+                            <br>
+                            <div class="row">
+                                <div class="col-50">
+                                    <label for="state">Check-In</label>
+                                    <input type="date">
+                                </div>
+                                <div class="col-50">
+                                    <label for="zip">Check-Out</label>
+                                    <input type="date">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <label>
+                        <input type="checkbox" checked="checked" name="sameadr"> Save this Information
+                    </label>
+                    <input type="submit" value="Continue to checkout" class="btn">
+                </form>
+            </div>
+
+    </body>
+</html>
