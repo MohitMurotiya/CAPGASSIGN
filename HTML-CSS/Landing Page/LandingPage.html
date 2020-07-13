@@ -1,0 +1,179 @@
+<html>
+    <head>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body{
+                font-family: Arial;
+            }
+            .header {
+                position: relative;
+                text-align: center;
+                color: white;
+            }
+            .centered {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                margin-left: 100px;
+                font-size: 80px;
+                font-family: fantasy;
+                
+            }
+            .navbar{
+                display: flex;
+                background-color: black;
+            }
+            .navbar a{
+                padding: 14px 20px;
+                color: white;
+                text-decoration: none;
+                text-align: center;
+            }
+            .navbar a:hover{
+                color: black;
+                background-color: white;
+            }
+            
+            a {
+                padding: 5px
+                text-align: center;
+                text-decoration: none;
+                color: black;
+            }
+            
+            a:hover{
+                color: black;
+                background-color: royalblue;
+            }
+            
+            /* Column container */
+            .row {  
+              display: flex;
+              flex-wrap: wrap;
+            }
+
+            /* Create two unequal columns that sits next to each other */
+            /* Sidebar/left column */
+            .side {
+                flex: 30%;
+                background-color: #f1f1f1;
+                padding: 20px;
+            }
+
+            /* Main column */
+            .main {
+                flex: 70%;
+                background-color: white;
+                padding: 20px;
+            }
+
+            /* Fake image, just for this example */
+            .fakeimg {
+                background-color: #aaa;
+                width: 100%;
+                margin: 5px;
+            }
+
+            /* Footer */
+            .footer {
+                padding: 20px;
+                text-align: center;
+                background: #ddd;
+            }
+            
+            .rest {
+                height: 140px;
+                width: 170px;
+            }
+            
+            .imgrow {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 0 4px;
+                
+            }
+            .column {
+                flex: 50%;
+                padding: 0 4px;
+            }
+
+            .column img {
+                margin-top: 8px;
+                vertical-align: middle;
+                height: 150px;
+                width: 270px;
+                background-size: cover;
+                transition: .3s all ease;
+            }
+
+            /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+            @media (max-width: 700px) {
+              .row, .navbar {   
+                flex-direction: column;
+              }
+            }
+        </style>
+        <body>
+            <div class="header">
+                <img src="images/bg_1.jpg" height="700px" width="100%">
+                <div class="centered">
+                    Experience Epic Beauty
+                    <p style="font-size: 25px; text-align: left">More than a Hotel... An Experience.</p>
+                </div>
+            </div>
+            
+            <div class="navbar">
+                <a href="#">SPECIAL ROOMS</a>
+                <a href="#">RESTAURANTS</a>
+                <a href="#">ABOUT</a>
+                <a href="#">CONTACT</a>
+            </div>
+            
+            <div class="row">
+                <div class="side">
+                    <h5 style="text-align: center">THE ROOMS</h5>
+                    <h2>THE HOTEL MASTERS ROOMS</h2>
+                    <br>
+                    <h4>SUITE ROOM <a href="#">Room Details</a></h4>
+                    <img class="fakeimg" height="250px" src="images/room-1.jpg" width="100px">
+                    <h4>FAMILY ROOM <a href="#">Room Details</a></h4>
+                    <img class="fakeimg" height="250px" src="images/room-2.jpg" width="100px">
+                    <h4>LUXURY ROOM <a href="#">Room Details</a></h4>
+                    <img class="fakeimg" height="250px" src="images/room-3.jpg" width="100px">
+                    <h4>SUPERIOR ROOM <a href="#">Room Details</a></h4>
+                    <img class="fakeimg" height="250px" src="images/room-4.jpg" width="100px">
+                </div>
+                    <div class="main">
+                        <h5 style="text-align: center">WELCOME TO THE HOTEL</h5>
+                        <h1 style="text-align: center; font-family: Arial">A New Vision of Luxury Hotel</h1>
+                        <img class="fakeimg" style="height:400px;" src="images/bg_3.jpg"/>
+                        <br><br>
+                        <h1 style="font-family: fantasy; margin-left: 10px">RESTAURANT</h1>
+                        <div class="imgrow">
+                            <div class="column">
+                                <img src="images/menu-1.jpg"><p style="font-size: 18px; font-style: italic; margin-left: 30px">Cheese Cake</p>
+                                <img src="images/menu-2.jpg"><p style="font-size: 18px; font-style: italic; margin-left: 40px">Ice-Creams</p>
+                                <img src="images/menu-3.jpg"><p style="font-size: 18px; font-style: italic; margin-left: 40px">PanCakes</p>
+                                <img src="images/menu-6.jpg"><p style="font-size: 18px; font-style: italic; margin-left: 40px">Pasta</p>
+                            </div>
+                            <div class="column">
+                                <img src="images/menu-6.jpg"><p style="font-size: 18px; font-style: italic; margin-left: 40px">Pasta</p>
+                                <img src="images/menu-3.jpg"><p style="font-size: 18px; font-style: italic; margin-left: 40px">PanCakes</p>
+                                <img src="images/menu-2.jpg"><p style="font-size: 18px; font-style: italic; margin-left: 40px">Ice-Creams</p>
+                                <img src="images/menu-1.jpg"><p style="font-size: 18px; font-style: italic; margin-left: 40px">Cheese Cake</p>
+                            </div>
+                        </div>
+                            
+                        
+                    </div>
+            </div>
+
+            <div class="footer">
+                <h1>Copyright ©2020 All rights reserved | This is made by MM</h1>
+            </div>
+
+        </body>
+    </head>
+</html>
