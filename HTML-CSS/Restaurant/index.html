@@ -1,0 +1,238 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            
+            body {
+                background-image: url(images/bg_2.jpg)
+            }
+            
+            body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+            
+            .navbar{
+                
+                margin-top: 20px;
+                margin-right: 20px;
+                padding: 0;
+                
+                
+            }
+            
+            .left {
+                float: left;
+            }
+            
+            .navbar a{
+                padding: 14px 20px;
+                color: white;
+                background-color: black;
+                margin-left: 10px;
+                text-decoration: none;
+                text-align: center;
+                font-size: 30px;
+                font-weight: bold;
+                float: right;
+            }
+            .navbar a:hover{
+                color: black;
+                background-color: white;
+            }
+            
+            .top {
+                margin-top: 100px;
+                display: grid;
+                grid-gap: 20px;
+                grid-template-areas:
+                    "hero hero cta1"
+                    "hero hero cta2";
+                margin-left: 25px;
+                }
+            
+            .hero {
+                grid-area: hero;
+                min-height: 400px;
+                background-color: inherit;
+                background-size: cover;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: center;
+                width: 700px;
+            }
+            
+            .cta1 {
+                grid-area: cta1;
+                height: 250px;
+                width: 400px;
+            }
+            
+            .cta2 {
+                grid-area: cta2;
+                height: 250px;
+                width: 400px;
+            }
+            .cta {
+                background-color: inherit;
+                display: grid;
+                align-items: center;
+                justify-items: center;
+                align-content: center;
+                margin-right: 100px;
+            }
+            
+            .flip-card {
+                background-color: transparent;
+                width: 400px;
+                height: 250px;
+            }
+
+            .flip-card-inner {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                transition: transform 0.6s;
+                transform-style: preserve-3d;
+            }
+
+            .flip-card:hover .flip-card-inner {
+                transform: rotateY(180deg);
+            }
+
+            .flip-card-front, .flip-card-back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+
+            .flip-card-front {
+                background-color: #bbb;
+                color: black;
+            }
+
+            .flip-card-back {
+                background-color: white;
+                color: black;
+                transform: rotateY(180deg);
+            }
+            
+            .features {
+                margin-top: 50px;
+                margin-left: 170px;
+                margin-right: 25px;
+                display: grid;
+                grid-gap: 20px;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+            .feature {
+                background: white;
+                padding: 10px;
+                border: 1px solid white;
+                text-align: center;
+                box-shadow: 0 0 4px rgba(0,0,0,0.1);
+            }
+            
+            .footer {
+                padding: 20px;
+                text-align: center;
+                background-color: black;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+            <div class="navbar">
+                <div class="left">
+                    <a href="#">MY PIZZA</a>
+                </div>
+                <a href="#">CONTACT US</a>
+                <a href="#">ABOUT</a>
+                <a href="#drinks">DRINKS</a>
+                <a href="#">DESSERTS</a>
+                <a href="#">PIZZAS</a>
+                <a href="#">HOME</a>
+            </div>
+        <br> 
+        
+        <div class="top">
+            <header class="hero">
+                <img src="images/1.jpg"/>
+            </header>
+            <div class="cta cta1">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/2.jpg" alt="Avatar" style="width:400px;height:250px;">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Margherita</h1> 
+                            <p>Ingredients : Goldern Corn, Black Olives, Capsicum & Red Paprika</p> 
+                            <p>A pizza that decidedly staggers under an overload of golden corn, exotic black olives, crunchy onions, crisp capsicum, succulent mushrooms, juicyfresh tomatoes and jalapeno - with extra cheese to go all around.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cta cta2">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/3.jpg" alt="Avatar" style="width:400px;height:250px;">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Margherita</h1> 
+                            <p>Ingredients : Goldern Corn, Black Olives, Capsicum & Red Paprika</p> 
+                            <p>A pizza that decidedly staggers under an overload of golden corn, exotic black olives, crunchy onions, crisp capsicum, succulent mushrooms, juicyfresh tomatoes and jalapeno - with extra cheese to go all around.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <section class="features">
+            <div class="feature">
+                <h1>PIZZA 1</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+            <div class="feature">
+                <h1>PIZZA 2</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+            </div>
+            <div class="feature">
+                <h1>PIZZA 3</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+            </div>
+            <div class="feature">
+                <h1>PIZZA 4</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+            </div>
+            <br>
+            <div class="feature">
+                <h1>DRINKS</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+            </div>
+            <div class="feature">
+                <h1>DESSERTS</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+            </div>
+            <div class="feature">
+                <h1>SHAKES</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+            </div>
+            <div class="feature">
+                <h1>ICE-CREAMS</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+            </div>
+        </section>
+        
+        <div style="margin: 80px">
+            <img src="images/4.jpg" width="100%" height="600px">
+        </div>
+        
+        <div class="footer">
+                <h1>Copyright ©2020 All rights reserved | This is made by MM</h1>
+        </div>
+    </body>
+</html>
