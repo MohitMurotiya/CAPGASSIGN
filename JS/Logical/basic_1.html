@@ -1,0 +1,41 @@
+<html>
+    <body>
+        <script>
+            /*--1--*/
+            var fourNums = [];
+            for(var i = 0; i<4; i++){
+                fourNums.push(Math.random());
+            }
+            
+            console.log(fourNums);
+            
+            /*--2--
+            var hundredNums = [];
+            hundredNums(100).fill().map(() => Math.random()*100);
+            
+            console.log(hundredNums); */
+            
+            /*--3--*/
+            function numberArray(arr){
+                var nums = arr.map(Number);
+                return nums;
+            }
+            var strings = ["2.3","4","6"];
+            console.log(numberArray(strings));
+            
+            /*--5--
+            
+            function lengthOfNonQWords(abc){
+                let count = 0
+                for(var i=0; i<abc.length; i++){
+                    while(abc[i].indexOf('q')){
+                        count = abc[i].length;
+                          }
+                }
+                return count;
+            }
+            var qwe = ["stop", "quit", "exit"];
+            console.log(lengthOfNonQWords(qwe)); */
+        </script>
+    </body>
+</html>

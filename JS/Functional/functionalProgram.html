@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <script>
+            function double(x){
+                return x*2;
+            }
+            function square(x){
+                return x*x;
+            }
+            function composedValue(){
+                let a = document.getElementById("num1").value;
+                if(a === ''){
+                   alert('Filled must not be Empty');
+                   }else
+                       document.getElementById("one").innerHTML = square(double(a));
+            }
+            
+            /*--*/
+            
+            function compose(f1, f2){
+                return function(x){
+                    return f1(f2(x));
+                }
+            }
+            var f1 = compose(square, double);
+            console.log(f1(5));
+            console.log(f1(10));
+            var f2 = compose(double, square);
+            console.log(f2(5));
+            console.log(f2(10));
+            /*--*/
+            
+            function isEven(x){
+                return (x%2 == 0);
+            }
+            function find(){
+                let l = [1,3,8,7,4,9]
+                let value;
+                for(let i=0; i<l.length; i++){
+                    if(isEven(l[i]) === true){
+                        value = l[i];
+                        break;
+                    }
+                }
+                document.getElementById("two").innerHTML = value;
+            }
+
+            /*--*/
+            
+            function sqrt(x){
+                return Math.sqrt(x);
+            }
+            var l = [1,2,3,4,5];
+            function map(){
+                let n1 = [], n2= [];
+                for(let i=0; i<l.length; i++){
+                    n1.push(square(l[i]));
+                    n2.push(sqrt(n1[i]));
+                }
+                document.getElementById("three").innerHTML = n1 + '  And ' + n2;
+            }
+            
+            /*--
+            function recursiveFind(){
+                let n = l.filter(isEven);
+                return n[0];
+            }
+            console.log(recursiveFind());*/
+            
+            /*--Recursive--*/
+            function find(l1, func1){
+                if(func1(l1.slice(0,1)) === true){
+                    console.log((l1.slice(0,1)) + ' : Recursive');
+                }
+                else{
+                    l1.shift();
+                    find(l1, func1 );
+                }
+            }
+            find(l, isEven); 
+            
+            /*--Recursive--*/
+            
+            function map(l1 , func1){
+                if(l1.length === 1){
+                    return func1(l1);
+                }
+                else{
+                    return [func1(l1[0])].concat(map(l1.slice(1) , func1));
+                }
+            }
+            console.log(map(l, square));
+                      
+            /*--Last One--*/
+            
+            (function () {
+                var l = prompt("Type Something..");
+                 console.log('"'+l+'"');
+            })();
+            
+            /*--*/
+            
+        </script>
+    </head>
+    <body>
+        <p style="text-align: center; font-size: 48px">FUNCTIONAL PROGRAMMING</p>
+        
+        <p>Ex-1: &nbsp;Enter a Number: </p>
+        <input type="number" id="num1" />&nbsp;&nbsp; <button onclick="composedValue()">Submit</button>
+        <p id="one">The first function called on the result of the second function called on the value</p>
+        
+        Ex-2: &nbsp;<p id="two">[1,3,8,7,4,9] &nbsp; Click the button given below to see the first Even Number</p>
+        <button onclick="find()">Click Me</button>
+        
+        <br><br>
+        Ex-3: &nbsp;<p id="three">[1,2,3,4,5] &nbsp; New List of Squares and Square Roots of the Elements</p>
+        <button onclick="map()">Click Me</button>
+        
+        <br><br>
+    </body>
+</html>

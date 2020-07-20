@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <script>
+            /*--Basic 1--*/
+            function abc(a) {
+                if (a % 2 === 0){
+                    return 'Even';
+                }else
+                    return 'Odd';
+            }
+            console.log(abc(20));
+            
+            /*--Basic 2--*/
+            function max(x, y, z){
+                if(x>y && x>z){
+                    return x;
+                }else if(y>z){
+                    return y;
+                }else
+                    return z;
+            }
+            
+            console.log(max(4, 20, 10));
+            
+            /*--Basic 3--*/
+            function coinFlip(){
+                return (Math.floor(Math.random()*2) === 0) ? 'Heads' : 'Tails';
+            }
+            
+            function numHeads(times){
+                var count = 0;
+                for(var i=0; i<times; i++){
+                    if(coinFlip() === 'Heads'){
+                        count++;
+                    }
+                }
+                return count;
+            }
+            
+            console.log(numHeads(10) + ' time Head appears');
+            
+            /*--Basic 4--*/
+            function headsRatio(times){
+                var count = 0;
+                for(var i=0; i<times; i++){
+                    if(coinFlip() === 'Heads'){
+                        count++;
+                    }
+                }
+                return count/times;
+            }
+            console.log(headsRatio(10000));
+            
+            /*--Basic 5--*/
+            function padChars(num, str){
+                /*var ex = '';
+                for(var i=0; i<num; i++){
+                    ex += str;
+                }*/
+                return str.repeat(num);
+            }
+            console.log(padChars(2, 'x'));
+            
+            /*--Basic 6--*/
+            function numRollsToGetSix(){
+                let count = 0, n;
+                while(n != 6){
+                    count++;
+                    n = Math.floor((Math.random()*6)+1);
+                }
+                return count;
+            }
+            
+            console.log(numRollsToGetSix() + ' to get 6');
+            
+            /*--Basic 7--*/
+            
+        </script>
+    </head>
+    <body>
+        <p id="demo" style="font-size: 36px"></p>
+        <script>
+            document.getElementById("demo").innerHTML = (Math.floor(Math.random()*2) === 0) ? 'Have a GOOD DAY!' : 'Have a BAD DAY!';
+        </script>
+    </body>
+</html>

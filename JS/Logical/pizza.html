@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script>
+            var toppings = document.querySelector('input[name="toppings"]:checked').value;
+            console.log(toppings);
+        </script>
+    </head>
+    <body>
+        <form action="#">
+            First Name: &nbsp;<input type="text" id="name" />
+            <br><br>
+            Email: &nbsp;<input type="text" id="email" />
+            <br><br>
+            Toppings: 
+            <br><br>
+            Extra Cheese: &nbsp;<input name="toppings" type="checkbox" value="Extra Cheese"/> &nbsp;&nbsp;
+            Olives: &nbsp;<input name="toppings" type="checkbox" value="Olives"/> &nbsp;&nbsp;
+            Pepper: &nbsp;<input name="toppings" type="checkbox" value="Pepper"/> &nbsp;&nbsp;
+            Bacon: &nbsp;<input name="toppings" type="checkbox" value="Bacon"/> &nbsp;&nbsp;
+            <br><br>
+            
+            How do you want to get your pizza? &nbsp;&nbsp; Delivery<input id="r1" type="radio"/> &nbsp;Pickup<input id="r2" type="radio"/> &nbsp;
+            <br><br>
+            Tip: &nbsp; 
+            <select>
+                <option>15%</option>
+                <option>20%</option>
+                <option>25%</option>
+            </select>
+            
+            <br><br>
+            Address: 
+            <input style="width: 400px; height: 100px" type="text" id="address"/>
+        </form>
+    </body>
+</html>

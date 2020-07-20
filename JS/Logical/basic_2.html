@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <script src="myScript.js"></script>
+    </head>
+    <body>
+        <script>
+            var x = 5;
+            console.log(x);
+            
+            function half(x) {
+                return(x / 2);
+            }
+            console.log(half(37));
+            
+            function seven() {
+                x = 7;
+                return(x);
+            }
+            
+            console.log(seven());
+            console.log(x);
+            
+            function calculation(a, b, c){
+                return (a+b)/c;
+            }
+            
+            console.log((calculation(1,-1,0)));
+            
+            function evenOdd(num) {
+                return ((num & 1) && 'Odd') || 'Even';
+            }
+            
+            console.log(evenOdd(5));
+        </script>
+        <p id="hello">Welcome..</p>
+        Ex-1:<button onclick="hello()">Click Me</button>
+        <br><br>
+        
+        
+        Ex-2: &nbsp;&nbsp;Enter Your Name: <input id="name" type="text"/>&nbsp;
+        <button onclick="enterName()">Submit</button>&nbsp; <p id="first"></p>
+        <br><br>
+        
+        
+        Ex-3: &nbsp;&nbsp;Enter Your Name: <input id="name1" type="text"/>&nbsp;
+        <button onclick="enName()">Submit</button>
+        <p id="second"></p>
+        
+        Ex-4: &nbsp;&nbsp;Enter Number: <input id="number" type="number"/>&nbsp;
+        <button onclick="sum()">Submit</button>
+        <p id="third"></p>
+        
+        Ex-5: &nbsp;&nbsp;Enter Number(Sum of Multiple of 5 or 7): <input id="number1" type="number"/>&nbsp;
+        <button onclick="sum1()">Submit</button>
+        <p id="four"></p>
+        
+        Ex-6: &nbsp;&nbsp;Enter Number: <input id="number2" type="number"/>&nbsp;
+        <button onclick="sum2()">Sum</button>&nbsp;
+        <button onclick="prod()">Product</button>
+        <p id="five"></p>
+        
+        Ex-7: &nbsp;&nbsp;Enter Number(Tables): <input id="number3" type="number"/>&nbsp;
+        <button onclick="mult()">Submit</button>
+        <p id="six"></p>
+        
+        Ex-8: &nbsp;&nbsp;Enter Number(Prime Numbers): <input id="number4" type="number"/>&nbsp;
+        <button onclick="prime()">Submit</button>
+        <p id="seven"></p>
+        
+        Ex-10: &nbsp;&nbsp;Enter Year(Leap Years): <input id="number5" type="number"/>&nbsp;
+        <button onclick="leap()">Submit</button>
+        <p id="eight"></p>
+        
+        Ex-18: Perfect Numbers:  &nbsp;&nbsp; Starting From: <input style="width: 65px" id="number6" type="number"/>&nbsp; End Until: <input style="width: 65px" id="number7" type="number"/>&nbsp;
+        <button onclick="perfectSquare()">Submit</button>
+        <p id="nine">Perfect Square B/W the given range is: </p>
+        
+        Ex-23: &nbsp;&nbsp;Enter Number(Fibonacci): <input id="number8" type="number"/>&nbsp;
+        <button onclick="fibonacci()">Submit</button>
+        <p id="ten"></p>
+        
+        Ex-30: &nbsp;&nbsp;Enter Sentence(Pig Lating): <input id="text4" type="text"/>&nbsp;
+        <button onclick="conversion()">Submit</button>
+        <p id="eleven"></p>
+    </body>
+</html>
